@@ -1,0 +1,241 @@
+body {
+  background-image: url("./assets/track.jpg");
+  overflow: hidden;
+}
+
+#animate-checkbox {
+  display: none;
+}
+
+#start-btn {
+  border-radius: 5px;
+  position: absolute;
+  width: 10%;
+  height: 5%;
+  top: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 60%;
+  background-color: #f0f0f0;
+  text-align: center;
+  line-height: 2.5;
+  cursor: pointer;
+}
+
+#start-btn:hover {
+  opacity: 90%;
+}
+
+#animate-checkbox:checked ~ .anime {
+  animation-play-state: running;
+}
+
+img {
+  position: absolute;
+}
+
+#charge_st {
+  top: 17%;
+  left: 8%;
+  width: 12%;
+}
+
+#charge_cable {
+  position: absolute;
+  background-color: black;
+  width: 0%;
+  height: 0px;
+  top: 34%;
+  right: 47%;
+  animation: ch_cable 14.8s paused forwards;
+}
+
+@keyframes ch_cable {
+  0% {
+    width: 0%;
+    height: 0px;
+  }
+  30% {
+    width: 0%;
+    height: 5px;
+  }
+  100% {
+    width: 38%;
+    height: 5px;
+  }
+}
+
+#r_left {
+  height: 9%;
+  top: 27%;
+  left: 50%;
+  visibility: hidden;
+  animation: left_runner 15s paused forwards;
+}
+
+#charger {
+  height: 3%;
+  top: 31%;
+  left: 51%;
+  visibility: hidden;
+  animation: chrg 15s paused forwards;
+}
+
+@keyframes left_runner {
+  0% {
+    left: 50%;
+    visibility: hidden;
+  }
+  29.9% {
+    visibility: hidden;
+  }
+  30% {
+    left: 50%;
+    visibility: visible;
+  }
+  99% {
+    left: 13%;
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes chrg {
+  0% {
+    left: 50%;
+    visibility: hidden;
+  }
+  29.9% {
+    visibility: hidden;
+  }
+  30% {
+    left: 50%;
+    visibility: visible;
+  }
+  100% {
+    left: 13%;
+    visibility: visible;
+  }
+}
+
+#r_right {
+  height: 12%;
+  top: 25%;
+  left: 52%;
+  visibility: hidden;
+}
+
+#battery_low {
+  width: 7%;
+  left: 54%;
+  top: 28%;
+  visibility: hidden;
+  animation: lowBat 15s paused forwards;
+}
+
+@keyframes lowBat {
+  0% {
+    visibility: hidden;
+  }
+  27% {
+    visibility: hidden;
+  }
+  28% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+#battery_charging {
+  width: 7%;
+  left: 54%;
+  top: 29%;
+  visibility: hidden;
+  animation: chBat 16s paused forwards;
+}
+
+@keyframes chBat {
+  0% {
+    visibility: hidden;
+  }
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+.car {
+  animation-play-state: paused;
+}
+
+#tesla {
+  width: 12%;
+  top: 30%;
+  left: 0%;
+  animation: tsl 4s ease-out paused forwards;
+}
+
+@keyframes tsl {
+  0% {
+    left: 0%;
+  }
+  60% {
+    left: 50%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+
+#bmw {
+  width: 17%;
+  top: 55%;
+  left: -2%;
+  animation: bm 4s ease-in paused forwards;
+}
+
+@keyframes bm {
+  0% {
+    left: -2%;
+  }
+  100% {
+    left: 110%;
+  }
+}
+
+#bmw2 {
+  width: 17%;
+  top: 33%;
+  left: -110%;
+  animation: bm2 16s ease-in paused forwards;
+}
+
+@keyframes bm2 {
+  0% {
+    left: 110%;
+  }
+  21% {
+    left: 110%;
+  }
+  33% {
+    left: 46%;
+  }
+  62% {
+    left: 12%;
+  }
+  85% {
+    left: 12%;
+  }
+  90% {
+    left: -20%;
+  }
+  100% {
+    left: -20%;
+  }
+}
